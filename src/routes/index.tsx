@@ -1,29 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BMICalculator } from "@/components/BMICalculator";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "BMI Calculator — Track Your Body Mass Index" },
+      { name: "description", content: "Free, modern BMI calculator. Instantly check your Body Mass Index, see your category, get health tips and track your history." },
+      { property: "og:title", content: "BMI Calculator — Track Your Body Mass Index" },
+      { property: "og:description", content: "Free, modern BMI calculator with health tips, history and downloadable reports." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <BMICalculator />;
 }
